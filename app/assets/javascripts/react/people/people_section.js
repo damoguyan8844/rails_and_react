@@ -99,11 +99,7 @@
         "onPaginate": this._handleOnPaginate
       }), React.createElement("div", {
         "className": "cards-wrapper"
-      }, (this.state.people.length > 0 ? {
-        cardsNode: cardsNode
-      } : this.state.didFetchData ? {
-        noDataNode: noDataNode
-      } : void 0)), React.createElement(PaginatorSection, {
+      }, cardsNode), React.createElement(PaginatorSection, {
         "totalPages": this.state.meta.total_pages,
         "currentPage": this.state.meta.current_page,
         "onPaginate": this._handleOnPaginate
