@@ -18,7 +18,7 @@ class PeopleController < ApplicationController
 
   def search_people
     @people =  if params[:search].present?
-      Person.search(params[:search])
+      Person.where("first_name like '%#{params[:search]}%' ")
     else
       Person.all
     end.sorted.page(params[:page])
